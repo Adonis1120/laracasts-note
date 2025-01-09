@@ -1,5 +1,9 @@
 <?php
 
+namespace Core;
+
+use PDO;    // Due to the use of namespace, you have also to declare all classes. All PHP classes like PDO will be use the root directory.
+
 Class Database {
     public $connection;
     public $statement;

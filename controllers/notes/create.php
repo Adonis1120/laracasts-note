@@ -1,18 +1,16 @@
 <?php
 
-require "Validator.php";
+use Core\Database;
+use Core\Validator;
 
-$config = require "config.php";
+require base_path("Core/Validator.php");
+
+$config = require base_path("config.php");
 $db = new Database($config["database"]);
 
-$heading = "create note";
-
-if (!Validator::email("aimperial@gmail.com")) {
-    dd("Not a valid email.");
-}
+$errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $errors = [];
 
     if (!Validator::string(($_POST["body"]), 1, 255)) {
         $errors["body"] = "The body must be at least 1 character and not exceed 255 characters.";
@@ -26,4 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-require "views/notes/note-create.view.php";
+view("notes/create.view.php", [
+    "heading" => "create note",
+    "errors" => $errors
+]);
