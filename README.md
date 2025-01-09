@@ -1,2 +1,4 @@
 # php-router-part2
-Laracasts PHP for beginners showing the final output with the mvc routing and creating newly structured framework boilerplate. Ref.: Episode 30 - 50 Link: https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
+This chuck was also save to preserve the new variation of routing and the use of namespace. This routing revised for the transfer of index.php in the public folder. This can be run with "php -S localhost:8080 -t public" to make the public folder as root to run the index.php transferred there.
+
+In other hand, this contain the basic routing with the index.php file transferred to a folder. Class files were also transferred from the root to the Core folder applying the namespace to access it. Ref.: Episode 30 - 50 Link: https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
