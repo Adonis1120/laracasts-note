@@ -11,9 +11,15 @@ spl_autoload_register(function($class) {
     require base_path("{$class}.php");
 });
 
-require base_path("Core/router.php");
+//require base_path("Core/router.php");
 
-/* This part is working but we removed the required path below to let the spl_autoload_register handle it instead.
-require base_path("Database.php");
-require base_path("Response.php");
-*/
+$router = new \Core\Router; // alternative way of class instance instead of declaring "use Core\Router" above
+
+$routes = require base_path("routes.php");
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+
+//routeToController($uri, $routes);
+
+$method = $_POST["_method"] ?? $_SERVER['REQUEST_METHOD'];
+
+$router->route($uri, "GET");

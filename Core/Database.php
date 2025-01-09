@@ -9,9 +9,11 @@ Class Database {
     public $statement;
 
     public function __construct($config, $username = "root", $password = "") {
-        $dsn = "mysql:" . http_build_query($config, "", ";");   //$dsn = "mysql:host=localhost;dbname=laracasts_note;user=root";
+        $dsn = "mysql:" . http_build_query($config, "", ";");   // $dsn = "mysql:host=localhost;dbname=laracasts_note;user=root";
         $this->connection = new PDO($dsn, $username, $password, [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+            // if "use PDO" was not set but namespace was set, you can also do this instead of "use PDO"
+            // \PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
     }
 
@@ -34,7 +36,8 @@ Class Database {
         $result = $this->find();
 
         if (!$result) {
-            abort();
+            $abort = new Router;
+            $abort->abort();
         }
 
         return $result;
