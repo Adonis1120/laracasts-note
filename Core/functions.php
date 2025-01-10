@@ -1,6 +1,7 @@
 <?php
 
 use Core\Response;
+use Core\Router;
 
 function dd($value) {
     echo "<pre>";
@@ -16,12 +17,14 @@ function urlIs($value) {
 
 function authorize($condition, $status = Response::FORBIDDEN) {
     if (!$condition) {
-        abort($status);
+        $abort = new Router;
+        $abort->abort($status);
     }
 }
 
 function base_path($path) {
     return BASE_PATH . $path;
+    dd(base_path($path));
 }
 
 function view($path, $attribute = []) {
