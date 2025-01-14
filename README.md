@@ -1,2 +1,5 @@
-# php-router-part2
-This routing setup supports the revised structure where index.php is moved to the public folder. It can be run using php -S localhost:8080 -t public, making the public folder the root directory. Class files are also relocated to the Core folder, with namespaces applied for proper access. Ref.: Episode 33 - 50 Link: https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
+# php-router-part3 RESTful Routing Convention
+This setup supports the RESTful routing convention and includes helpers like get, post, delete, patch, put and route.
+
+Ref.: Episode 33 - 50
+Link: https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC
