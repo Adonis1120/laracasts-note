@@ -19,6 +19,8 @@ if (!empty($errors)) {
         "heading" => "create note",
         "errors" => []
     ]);
+
+    exit();
 }
 
 $db->query("INSERT INTO notes(body, user_id) VALUES(:body, :user_id)", [
