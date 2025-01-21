@@ -3,6 +3,11 @@
 use Core\App;
 use Core\Database;
 
+if (!$_SESSION["user"] ?? false) {
+    header("location: /");
+    exit();
+}
+
 /* Use this if you don't use bootstrap.php, Container.php and App.php
 //$config = require base_path("config.php");
 //$db = new Database($config["database"]);
