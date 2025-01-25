@@ -1,0 +1,16 @@
+{
+    "name": "jayso/laracasts-note",
+    "authors": [
+        {
+            "name": "Adonis Imperial",
+            "email": "adonisimperial@yahoo.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}

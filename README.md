@@ -1,5 +1,5 @@
-# prg-pattern-part4 Post Redirect Get
-This setup is from the RESTful routing convention with the PRG pattern.
+# composer-part5 Composer
+This includes composer and free autoloading, collections and pestPHP, testing approach tdd and pest 2160p.
 
-Ref.: Episode 44 - 50
+Ref.: Episode 47 - 50
 Link: https://www.youtube.com/playlist?list=PL3VM-unCzF8ipG50KDjnzhugceoSG3RTC

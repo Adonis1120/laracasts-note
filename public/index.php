@@ -3,18 +3,22 @@
 use Core\Session;
 use Core\ValidationException;
 
-session_start();
-
 const BASE_PATH = __DIR__ . "/../";
+
+require BASE_PATH . "vendor/autoload.php";
+
+session_start();
 
 require BASE_PATH . "Core/functions.php";
 
+/* Composer Autoload will be used as stated in the above line requiring vendor autoload
 spl_autoload_register(function($class) {
     // Translate Core\Database (the "\" is caused by the namespace) to Core/Database
     //require base_path("Core/{$class}.php");
     $class = str_replace("\\", "/", $class);
     require base_path("{$class}.php");
 });
+*/
 
 require base_path("bootstrap.php");
 
